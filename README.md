@@ -33,7 +33,7 @@ helm repo add projectcalico https://docs.projectcalico.org/charts
 # 2. 列出本地repo
 helm repo list
 # 3. 下载repo到本地并解压
-helm pull projectcalico/tigera-operator --version v3.20.0 --untar --untar calico
+helm pull projectcalico/tigera-operator --version v3.20.0 --untar --untardir calico
 ```
 
 ## 5. 参考资料
