@@ -12,9 +12,15 @@
 ## 2. 实战
 
 ### 安装Helm3
-使用脚本安装
+1. 使用脚本安装
 ```shell
 curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+```
+2. 分步安装
+```shell
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
 ```
 
 ## 4. 操作技巧
