@@ -395,7 +395,7 @@ alertmanager:
     ## Image of Alertmanager
     ##
     image:
-      repository: quay.io/prometheus/alertmanager
+      repository: quay.mirrors.ustc.edu.cn/prometheus/alertmanager
       tag: v0.22.2
       sha: ""
 
@@ -1575,7 +1575,7 @@ prometheusOperator:
   ## Prometheus-operator image
   ##
   image:
-    repository: quay.io/prometheus-operator/prometheus-operator
+    repository: quay.mirrors.ustc.edu.cn/prometheus-operator/prometheus-operator
     tag: v0.49.0
     sha: ""
     pullPolicy: IfNotPresent
@@ -1591,7 +1591,7 @@ prometheusOperator:
   ## Prometheus-config-reloader image to use for config and rule reloading
   ##
   prometheusConfigReloaderImage:
-    repository: quay.io/prometheus-operator/prometheus-config-reloader
+    repository: quay.mirrors.ustc.edu.cn/prometheus-operator/prometheus-config-reloader
     tag: v0.49.0
     sha: ""
 
@@ -1606,7 +1606,7 @@ prometheusOperator:
   ## Thanos side-car image when configured
   ##
   thanosImage:
-    repository: quay.io/thanos/thanos
+    repository: quay.mirrors.ustc.edu.cn/thanos/thanos
     tag: v0.17.2
     sha: ""
 
@@ -1959,7 +1959,7 @@ prometheus:
     ## Image of Prometheus.
     ##
     image:
-      repository: quay.io/prometheus/prometheus
+      repository: quay.mirrors.ustc.edu.cn/prometheus/prometheus
       tag: v2.28.1
       sha: ""
 
