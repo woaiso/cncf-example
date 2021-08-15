@@ -30,7 +30,8 @@ calicoNetwork:
 tigeraOperator:
   image: tigera/operator
   version: v1.20.0
-  registry: quay.io
+  registry: quay.mirrors.ustc.edu.cn
 calicoctl:
-  image: quay.io/docker.io/calico/ctl
+  image: calico/ctl
   tag: v3.20.0
+  registry: quay.mirrors.ustc.edu.cn
