@@ -134,3 +134,23 @@ For large-scale gateways it is optionally possible to use a dedicated pilot in t
 
 A number of helm test setups are general-purpose and should be installable in any cluster, to confirm
 Istio works properly and allow testing the specific install.
+
+### Install
+```shell
+helm install istiod charts/istio/istio-control/istio-discovery \
+    --set global.hub="docker.io/istio" \
+    --set global.tag="1.11.0" \
+    -n istio-system
+
+
+helm install istio-ingress charts/istio/gateways/istio-ingress \
+    --set global.hub="docker.io/istio" \
+    --set global.tag="1.11.0" \
+    -n istio-system
+
+
+helm install istio-egress charts/istio/gateways/istio-egress \
+    --set global.hub="docker.io/istio" \
+    --set global.tag="1.11.0" \
+    -n istio-system
+```
