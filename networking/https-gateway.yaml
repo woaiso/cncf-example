@@ -15,4 +15,23 @@ spec:
       - "*"
     tls:
       mode: SIMPLE
-      credentialName: "monitoring-credential" # must be the same as secret
+      credentialName: "woaiso-credential" # must be the same as secret
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: https-gateway
+  namespace: istio-system
+spec:
+  selector:
+    istio: ingressgateway # use Istio default gateway implementation
+  servers:
+  - port:
+      number: 443
+      name: https
+      protocol: HTTPS
+    hosts:
+      - "*"
+    tls:
+      mode: SIMPLE
+      credentialName: "woaiso-credential" # must be the same as secret
