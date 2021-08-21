@@ -67,6 +67,8 @@ deployment:
 external_services:
   custom_dashboards:
     enabled: true
+  prometheus:
+    url: http://prometheus-operated.monitoring.svc.cluster.local:9090
 
 identity: {}
   #cert_file:
