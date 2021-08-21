@@ -1,0 +1,13 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: grafana
+spec:
+  hosts:
+  - grafana.woaisok8s.com
+  http:
+  - route:
+    - destination:
+        host: monitor-grafana
+  gateways:
+    - https-gateway
