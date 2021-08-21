@@ -8,7 +8,7 @@ spec:
   - kiali.woaisok8s.com
   gateways:
   - https-gateway
-    http-gateway
+  - http-gateway
   http:
   - match:
     - uri:
