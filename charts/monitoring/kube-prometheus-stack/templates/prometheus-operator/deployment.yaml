@@ -72,7 +72,7 @@ spec:
             {{- end }}
             - --config-reloader-cpu-request={{ .Values.prometheusOperator.configReloaderCpuRequeset }}
             - --config-reloader-cpu-limit={{ .Values.prometheusOperator.configReloaderCpuLimit }}
-            - --config-reloader-memory-request{{ .Values.prometheusOperator.configReloaderMemoryRequest }}
+            - --config-reloader-memory-request={{ .Values.prometheusOperator.configReloaderMemoryRequest }}
             - --config-reloader-memory-limit={{ .Values.prometheusOperator.configReloaderMemoryLimit }}
             {{- if .Values.prometheusOperator.alertmanagerInstanceNamespaces }}
             - --alertmanager-instance-namespaces={{ .Values.prometheusOperator.alertmanagerInstanceNamespaces | join "," }}
