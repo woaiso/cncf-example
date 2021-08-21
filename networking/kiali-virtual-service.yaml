@@ -7,8 +7,7 @@ spec:
   hosts:
   - kiali.woaisok8s.com
   gateways:
-  - https-gateway
-  - http-gateway
+  - istio-system/istio-int-gateway
   http:
   - match:
     - uri:
