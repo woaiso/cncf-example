@@ -23,6 +23,25 @@ chmod 700 get-helm-3.sh
 ./get-helm-3.sh
 ```
 
+### 安装istio
+
+1. 去[Github Release](https://github.com/istio/istio/releases/tag/1.11.0)界面下载最新的istio版本
+2. 解压文件，helm charts 在manifests/charts目录内
+3. 拷贝到本仓库
+4. 按照 [istio/README-helm3.md](charts/istio/README-helm3.md) 文件指示进行安装
+
+### 安装监控 kube-prometheus-stack
+1. 添加 `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`
+2. 下载 `helm pull prometheus-community/kube-prometheus-stack --version v17.2.2 --untar --untardir monitoring`
+3. 安装 `helm install monitroing charts/monitoring/kube-prometheus-stack
+
+### 安装[kiali.io](https://kiali.io/documentation/v1.39/quick-start/)可视化Service Mesh
+
+1. 添加 `helm repo add kiali https://kiali.org/helm-charts`
+2. 下载 `helm pull kiali/kiali-server --untar --untardir charts/istio`
+3. 安装 `helm install --namespace istio-system --set auth.strategy="anonymous" kiali-server charts/istio/kiali-server`
+
+
 ## 4. 操作技巧
 
 **下载chart到本地**
