@@ -6,7 +6,7 @@ spec:
   hosts:
   - grafana.woaisok8s.com
   gateways:
-    - https-gateway
+  - https-gateway
   http:
   - match:
     - uri:
