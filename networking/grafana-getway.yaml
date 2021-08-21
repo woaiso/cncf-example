@@ -4,7 +4,7 @@ metadata:
   name: https-gateway
 spec:
   selector:
-    app: https-gateway-controller
+    istio: ingressgateway # use Istio default gateway implementation
   servers:
   - port:
       number: 443
