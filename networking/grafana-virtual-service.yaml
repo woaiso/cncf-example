@@ -9,5 +9,8 @@ spec:
   - route:
     - destination:
         host: monitor-grafana
+        port:
+          number: 80
   gateways:
     - https-gateway
+

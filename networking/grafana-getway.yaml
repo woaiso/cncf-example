@@ -11,7 +11,7 @@ spec:
       name: https
       protocol: HTTPS
     hosts:
-    - grafana.woaisok8s.com
+      - "*"
     tls:
       mode: SIMPLE
       serverCertificate: /tmp/tls.crt
