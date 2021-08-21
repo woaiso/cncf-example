@@ -1600,11 +1600,13 @@ prometheusOperator:
 
   ## Set the prometheus config reloader side-car CPU limit
   ##
-  configReloaderCpu: 100m
+  configReloaderCpuRequest: 100m
+  configReloaderCpuLimit: 200m
 
   ## Set the prometheus config reloader side-car memory limit
   ##
-  configReloaderMemory: 50Mi
+  configReloaderMemoryRequest: 50Mi
+  configReloaderMemoryLimit: 100Mi
 
   ## Thanos side-car image when configured
   ##
