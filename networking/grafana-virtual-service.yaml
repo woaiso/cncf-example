@@ -16,7 +16,7 @@ spec:
     - destination:
         port:
           number: 80
-        host: monitor-grafana
+        host: monitoring-grafana
 
 ---
 apiVersion: networking.istio.io/v1alpha3
@@ -37,4 +37,4 @@ spec:
     - destination:
         port:
           number: 80
-        host: monitor-grafana
+        host: monitoring-grafana
