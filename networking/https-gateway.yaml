@@ -15,5 +15,4 @@ spec:
       - "*"
     tls:
       mode: SIMPLE
-      serverCertificate: /tmp/tls.crt
-      privateKey: /tmp/tls.key
+      credentialName: "monitoring-credential" # must be the same as secret
