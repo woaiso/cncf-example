@@ -8,7 +8,7 @@ nameOverride: ""
 
 ## Override the deployment namespace
 ##
-namespaceOverride: ""
+namespaceOverride: "monitoring"
 
 ## Provide a k8s version to auto dashboard import script example: kubeTargetVersionOverride: 1.16.6
 ##
@@ -395,7 +395,7 @@ alertmanager:
     ## Image of Alertmanager
     ##
     image:
-      repository: quay.mirrors.ustc.edu.cn/prometheus/alertmanager
+      repository: prom/alertmanager
       tag: v0.22.2
       sha: ""
 
@@ -621,7 +621,7 @@ alertmanager:
 ##
 grafana:
   enabled: true
-  namespaceOverride: ""
+  namespaceOverride: "monitoring"
 
   ## ForceDeployDatasources Create datasource configmap even if grafana deployment has been disabled
   ##
@@ -1253,7 +1253,7 @@ kubeStateMetrics:
     selectorOverride: {}
     ## Override namespace selector
     ##
-    namespaceOverride: ""
+    namespaceOverride: "monitoring"
 
     ## Metric relabel configs to apply to samples before ingestion.
     ##
@@ -1279,7 +1279,7 @@ kubeStateMetrics:
 ## Configuration for kube-state-metrics subchart
 ##
 kube-state-metrics:
-  namespaceOverride: ""
+  namespaceOverride: "monitoring"
   rbac:
     create: true
   podSecurityPolicy:
@@ -1329,7 +1329,7 @@ nodeExporter:
 ## Configuration for prometheus-node-exporter subchart
 ##
 prometheus-node-exporter:
-  namespaceOverride: ""
+  namespaceOverride: "monitoring"
   podLabels:
     ## Add the 'node-exporter' label to be used by serviceMonitor to match standard common usage in rules and grafana dashboards
     ##
@@ -1575,8 +1575,8 @@ prometheusOperator:
   ## Prometheus-operator image
   ##
   image:
-    repository: quay.mirrors.ustc.edu.cn/prometheus-operator/prometheus-operator
-    tag: v0.49.0
+    repository: bitnami/prometheus-operator
+    tag: 0.50.0
     sha: ""
     pullPolicy: IfNotPresent
 
@@ -1959,8 +1959,8 @@ prometheus:
     ## Image of Prometheus.
     ##
     image:
-      repository: quay.mirrors.ustc.edu.cn/prometheus/prometheus
-      tag: v2.28.1
+      repository: prom/prometheus
+      tag: v2.29.1
       sha: ""
 
     ## Tolerations for use with node taints
