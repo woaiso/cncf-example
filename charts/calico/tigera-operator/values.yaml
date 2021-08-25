@@ -25,6 +25,8 @@ calicoNetwork:
     encapsulation: VXLANCrossSubnet
     natOutgoing: Enabled
     nodeSelector: all()
+  nodeAddressAutodetectionV4:
+    interface: "eth.*"
 
 # Configuration for the tigera operator
 tigeraOperator:
