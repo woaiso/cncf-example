@@ -25,6 +25,7 @@ calicoNetwork:
     encapsulation: VXLANCrossSubnet
     natOutgoing: Enabled
     nodeSelector: all()
+  # https://www.fireballman.com/resolve-failed-calico-node-bird-is-not-ready/
   nodeAddressAutodetectionV4:
     interface: "eth.*"
 
