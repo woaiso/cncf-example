@@ -23,6 +23,11 @@ chmod 700 get-helm-3.sh
 ./get-helm-3.sh
 ```
 
+### 安装calico网络插件
+1. [使用helm3安装calico](https://docs.projectcalico.org/getting-started/kubernetes/helm)
+2. 安装 `helm install calico charts/calico/tigera-operator`
+3. 观察 `watch kubectl get pods -n calico-system`
+
 ### 安装istio
 
 1. 去[Github Release](https://github.com/istio/istio/releases/tag/1.11.0)界面下载最新的istio版本
