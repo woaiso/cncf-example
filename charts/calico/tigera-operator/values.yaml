@@ -27,7 +27,7 @@ calicoNetwork:
     nodeSelector: all()
   # https://www.fireballman.com/resolve-failed-calico-node-bird-is-not-ready/
   nodeAddressAutodetectionV4:
-    interface: "eth.*"
+    interface: "en.*"
 
 # Configuration for the tigera operator
 tigeraOperator:
