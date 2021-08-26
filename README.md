@@ -38,7 +38,7 @@ chmod 700 get-helm-3.sh
 ### 安装监控 kube-prometheus-stack
 1. 添加 `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`
 2. 下载 `helm pull prometheus-community/kube-prometheus-stack --version v17.2.2 --untar --untardir monitoring`
-3. 安装 `helm install monitroing charts/monitoring/kube-prometheus-stack
+3. 安装 `helm install monitoring charts/monitoring/kube-prometheus-stack`
 
 ### 安装[kiali.io](https://kiali.io/documentation/v1.39/quick-start/)可视化Service Mesh
 
