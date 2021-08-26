@@ -899,7 +899,7 @@ externalDatabase:
   user: bn_keycloak
   ## @param externalDatabase.password Database password
   ##
-  password: ""
+  password: "jhWpKK4KW7"
   ## @param externalDatabase.database Database name
   ##
   database: bitnami_keycloak
