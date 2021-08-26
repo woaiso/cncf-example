@@ -861,7 +861,7 @@ metrics:
 postgresql:
   ## @param postgresql.enabled Deploy a PostgreSQL server to satisfy the applications database requirements
   ##
-  enabled: true
+  enabled: false
   ## @param postgresql.postgresqlUsername Keycloak PostgreSQL user (has superuser privileges if username is `postgres`)
   ## ref: https://github.com/bitnami/bitnami-docker-postgresql/blob/master/README.md#setting-the-root-password-on-first-run
   ##
@@ -890,10 +890,10 @@ postgresql:
 externalDatabase:
   ## @param externalDatabase.host Host of the external database
   ##
-  host: ""
+  host: "mysql.database.svc.cluster.local"
   ## @param externalDatabase.port Database port
   ##
-  port: 5432
+  port: 3306
   ## @param externalDatabase.user non admin username for Keycloak Database
   ##
   user: bn_keycloak
