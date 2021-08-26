@@ -14,7 +14,7 @@ global:
   ##   - myRegistryKeySecretName
   ##
   imagePullSecrets: []
-  storageClass: ""
+  storageClass: "local-storage"
 
 ## @section Common parameters
 
@@ -386,7 +386,7 @@ primary:
       - ReadWriteOnce
     ## @param primary.persistence.size MySQL primary persistent volume size
     ##
-    size: 8Gi
+    size: 3Gi
     ## @param primary.persistence.selector [object] Selector to match an existing Persistent Volume
     ## selector:
     ##   matchLabels:
@@ -697,7 +697,7 @@ secondary:
       - ReadWriteOnce
     ## @param secondary.persistence.size MySQL secondary persistent volume size
     ##
-    size: 8Gi
+    size: 3Gi
     ## @param secondary.persistence.selector [object] Selector to match an existing Persistent Volume
     ## selector:
     ##   matchLabels:
