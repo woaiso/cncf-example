@@ -905,4 +905,4 @@ externalDatabase:
   database: bitnami_keycloak
   ## @param externalDatabase.existingSecret Use an existing secret file with the external PostgreSQL credentials
   ##
-  existingSecret: ""
+  # existingSecret: ""
