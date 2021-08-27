@@ -16,12 +16,10 @@ spec:
       - name: mysql
         image: bitnami/mysql:8.0.26-debian-10-r10
         imagePullPolicy: IfNotPresent
-        ports:
-        - containerPort: 3306
         resources:
-          limits:
-            memory: 256Mi
-            cpu: 200m
           requests:
-            memory: 128Mi
-            cpu: 100mi
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 200Mi
