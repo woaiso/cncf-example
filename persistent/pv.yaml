@@ -53,3 +53,30 @@ spec:
           operator: In
           values:
           - k8s-master-node1
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mysql-data-03
+  namespace: database
+  labels:
+    app: mysql
+spec:
+  capacity:
+    storage: 3Gi
+  volumeMode: Filesystem
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: local-storage
+  local:
+    path: /mnt/data/mysql-data-03
+  # 使用节点亲和性nodeAffinity保证被正确调度到对应的节点
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - k8s-master-node1
