@@ -12,8 +12,6 @@ spec:
     metadata:
       labels:
         app: mysql-client
-      annotations:
-        sidecar.istio.io/inject: "false"
     spec:
       containers:
       - name: mysql
