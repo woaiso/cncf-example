@@ -19,6 +19,9 @@ spec:
       - name: mysql
         image: bitnami/mysql:8.0.26-debian-10-r10
         imagePullPolicy: IfNotPresent
+        env:
+        - name: MYSQL_ALLOW_EMPTY_PASSWORD
+          value: "1"
         resources:
           requests:
             cpu: 100m
